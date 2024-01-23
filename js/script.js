@@ -25,7 +25,7 @@ const app = createApp({
             this.$refs.input.focus();
         },
 
-        /*
+        /* TOGGLE SENZA CHECKBOX (SOLTANTO CON ID)
         toggleTaskDone(clickedId) {
             this.tasks.forEach(task => {
                 if (clickedId === task.id) {
