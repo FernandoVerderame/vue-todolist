@@ -3,13 +3,26 @@ const {createApp} = Vue;
 const app = createApp({
     name: 'VueTodoList',
     data: () => ({
-        tasks
-        
+        tasks,
+        newTaskText: ''
     }),
 
     methods: {
         deleteTask(id) {
             this.tasks = this.tasks.filter(task => id !== task.id);
+        },
+
+        addTask() {
+            const newTask = {
+                id: new Date, 
+                done: false,
+                text: this.newTaskText
+            }
+
+            this.tasks.push(newTask);
+
+            this.newTaskText = '';
+            this.$refs.input.focus();
         }
     }
 });

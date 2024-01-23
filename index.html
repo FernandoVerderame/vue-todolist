@@ -43,6 +43,14 @@
                                 <span :class="{'text-decoration-line-through': task.done === true}">{{task.text}}</span>
                                 <button type="button" class="btn-close" @click="deleteTask(task.id)"></button>
                             </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Aggiungi Task" v-model.trim="newTaskText" ref="input">
+                                    <button class="btn btn-outline-secondary" type="button" @click="addTask">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </main>
