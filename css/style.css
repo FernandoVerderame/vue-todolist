@@ -1,0 +1,12 @@
+/* ? Generics */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* !Header */
+header img{
+    width: 300px;
+    margin-top: 50px;
+}
