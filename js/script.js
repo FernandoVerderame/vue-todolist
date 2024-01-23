@@ -23,7 +23,17 @@ const app = createApp({
 
             this.newTaskText = '';
             this.$refs.input.focus();
+        },
+
+        /*
+        toggleTaskDone(clickedId) {
+            this.tasks.forEach(task => {
+                if (clickedId === task.id) {
+                    task.done = !task.done
+                }
+            })
         }
+        */
     }
 });
 
