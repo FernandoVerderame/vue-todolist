@@ -4,8 +4,19 @@ const app = createApp({
     name: 'VueTodoList',
     data: () => ({
         tasks,
-        newTaskText: ''
+        newTaskText: '',
+        searchText: ''
     }),
+
+    computed: {
+        filteredTasks() {
+            const searchText = this.searchText.toLowerCase();
+
+            return this.tasks.filter(task => 
+                task.text.toLowerCase().includes(searchText)
+            );
+        }
+    },
 
     methods: {
         deleteTask(id) {

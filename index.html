@@ -38,10 +38,19 @@
                 <!-- ! Main -->
                 <main>
                     <div class="main-list">
+
+                        <!-- Barra di ricerca -->
+                        <div class="input-group mb-4">
+                            <input type="text" class="form-control" placeholder="Cerca..." v-model.trim="searchText">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </div>
+
                         <ul class="list-group">
 
                             <!-- Lista -->
-                            <li v-for="task in tasks" class="list-group-item d-flex justify-content-between align-items-center">
+                            <li v-for="task in filteredTasks" class="list-group-item d-flex justify-content-between align-items-center">
                                 <div class="form-check">
                                     <label role="button" class="form-check-label" :class="{'text-decoration-line-through': task.done}">
                                         <input class="form-check-input" type="checkbox" v-model="task.done">
@@ -64,7 +73,7 @@
                         </ul>
 
                         <!-- Messaggio no tasks presenti -->
-                        <h2 class="mt-4 text-center" v-show="!tasks.length">Non ci sono Task</h2>
+                        <h2 class="mt-4 text-center" v-show="!filteredTasks.length">Non ci sono Task <span v-if="searchText">contenenti <br> "{{searchText}}"</span></h2>
 
                         <!-- Comandi di massa -->
                         <div v-if="tasks.length" class="btn-group w-100 mt-4" role="group">
