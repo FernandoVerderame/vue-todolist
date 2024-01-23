@@ -10,3 +10,9 @@ header img{
     width: 300px;
     margin-top: 50px;
 }
+
+/* ! Main */
+.main-list {
+    width: 500px;
+    margin: 40px auto;
+}
