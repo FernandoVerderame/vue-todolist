@@ -65,6 +65,13 @@
 
                         <!-- Messaggio no tasks presenti -->
                         <h2 class="mt-4 text-center" v-show="!tasks.length">Non ci sono Task</h2>
+
+                        <!-- Comandi di massa -->
+                        <div v-if="tasks.length" class="btn-group w-100 mt-4" role="group">
+                            <button type="button" class="btn btn-outline-success" @click="setAllAs(true)">Tutti fatti</button>
+                            <button type="button" class="btn btn-outline-secondary" @click="setAllAs(false)">Tutti da fare</button>
+                            <button type="button" class="btn btn-outline-danger" @click="deleteAllTasks">Elimina tutti</button>
+                        </div>
                     </div>
                 </main>
 

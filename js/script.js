@@ -34,6 +34,16 @@ const app = createApp({
             })
         }
         */
+
+        setAllAs(value) {
+            this.tasks.forEach(task => {
+                task.done = value;
+            })
+        },
+
+        deleteAllTasks() {
+            this.tasks = [];
+        }
     }
 });
 
