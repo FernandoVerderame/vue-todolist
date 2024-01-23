@@ -39,7 +39,9 @@
                 <main>
                     <div class="main-list">
                         <ul class="list-group">
-                            <li class="list-group-item">An active item</li>
+                            <li v-for="task in tasks" class="list-group-item">
+                                <span :class="{'text-decoration-line-through': task.done === true}">{{task.text}}</span>
+                            </li>
                         </ul>
                     </div>
                 </main>
