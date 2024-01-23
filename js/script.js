@@ -14,7 +14,7 @@ const app = createApp({
 
         addTask() {
             const newTask = {
-                id: new Date, 
+                id: new Date().toISOString(), 
                 done: false,
                 text: this.newTaskText
             }

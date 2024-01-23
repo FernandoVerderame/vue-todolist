@@ -45,7 +45,7 @@
                             </li>
                             <li class="list-group-item d-flex align-items-center">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Aggiungi Task" v-model.trim="newTaskText" ref="input">
+                                    <input type="text" class="form-control" placeholder="Aggiungi Task" v-model.trim="newTaskText" @keyup.enter="addTask" ref="input">
                                     <button class="btn btn-outline-secondary" type="button" @click="addTask">
                                         <i class="fa-solid fa-plus"></i>
                                     </button>
