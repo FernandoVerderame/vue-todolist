@@ -25,3 +25,11 @@ SUPER BONUS
 Creare dei bottoni con le azioni massive (tutti fatti, tutti da fare, elimina tutti)
 Creare un filtro di ricerca in tempo reale
 Buon lavoro e buon divertimento!
+
+
+
+##  SCALETTA 
+1. Stampo all'interno dell'HTML un item per ogni nodo
+2. Sbarro dalla lista il testo se l'item possiede la proprietà done uguale a true
+3. Rendo i singoli item rimovibili tramite una "x"
+4. Creo un campo input testuale utile all'aggiunta di un nuovo todo
