@@ -16,3 +16,7 @@ header img{
     width: 500px;
     margin: 40px auto;
 }
+
+.main-list li {
+    height: 50px;
+}
